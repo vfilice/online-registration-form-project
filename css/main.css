@@ -5,7 +5,7 @@
 }
 
 body {
-	font-family: 'Lato', sans-serif;;
+	font-family: 'Lato', sans-serif;
 	color: #fff;
 }
 
@@ -117,16 +117,8 @@ select {
 	height: 48px;
 }
 
-select:required:invalid {
-  	color: gray;
-}
-
-option[value=""][disabled] {
-  	display: none;
-}
-
 option {
-  	color: black;
+  	color: #000;
 }
 
 button {
