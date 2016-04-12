@@ -70,10 +70,8 @@ select {
 	background-color: #eee;
 	color: #000;
 	text-align: left;
-}
 
-input[type="number"] {
-	width: 50%;
+	
 }
 
 input[type="text"]:focus,
@@ -86,7 +84,33 @@ select:focus {
 	outline: none;
 	background-color: #fff;
 	border-bottom: 4px solid #e05135;
-	text-align: left;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select,
+button {
+	-webkit-transition: background-color .5s ease, color .5s ease, border .5s ease;
+   -moz-transition: background-color .5s ease, color .5s ease, border .5s ease;
+   transition: background-color .5s ease, color .5s ease, border .5s ease;
+} 
+
+input[type="number"] {
+	width: 50%;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    text-align: right;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
 select {
@@ -118,6 +142,16 @@ button {
     letter-spacing: 0.03em;
 }
 
+button:hover {
+	color: #ccc;
+	background-color: #BD3117;
+}
+
+button:active {
+	color: #282936;
+	background-color: rgba(224, 81, 53, 0.64);
+}
+
 fieldset {
 	border: none;
 	padding: 0;
@@ -147,6 +181,7 @@ section:after {
 	display: block;
     margin-top: 1.5em;
     font-size: 0.85em;
+    color: #ccc;
 }
 
 /*-----Classes---------*/
@@ -167,6 +202,10 @@ section:after {
 
 .more_room {
 	margin: 2em 0 1em;
+}
+
+.more_room2 {
+	margin-bottom: 1em;
 }
 
 .small {
@@ -221,6 +260,10 @@ input[type="radio"] + label:before {
 	section {
 		padding: 45px;
 	}
+
+	.arrow-down {
+		left: 34px;
+	}
 }
 
 @media screen and (min-width: 760px) {
@@ -232,11 +275,24 @@ input[type="radio"] + label:before {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
-	input[type="number"],
 	input[type="tel"],
 	select {
-		width: 80%;
+		width: 75%;
 		text-align: right;
+	}
+
+	input[type="number"] {
+		width: 25%;
+	}
+
+	legend {
+		font-size: 1.1em;
+		margin-bottom: 2em;
+	}
+
+	.newsletter label,
+	.privacy label {
+		display: block;
 	}
 
 	textarea {
@@ -245,10 +301,14 @@ input[type="radio"] + label:before {
 
 	label {
 		display: inline-block;
-		width: 18%;
+		width: 24%;
 	}
 
-	.more_room {
+	.arrow-down {
+		left: 40px;
+	}
+
+	.more_room, .more_room2 {
 		display: block;
 		width: 100%;
 	}
