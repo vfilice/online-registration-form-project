@@ -5,14 +5,16 @@
 		<title>Sign Up Form</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/normalize.css">
-        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
 
-		<h1>The Code Review</h1>
+		
 
 		<form>
+			<h1>The Code Review</h1>
+			<div class="arrow-down"></div>
 
 			<section>
 
@@ -26,13 +28,13 @@
 					<legend>Contact Information</legend>
 
 					<label for="name">Full Name</label>
-					<input type="text" id="name" name="user_name">
+					<input type="text" id="name" name="user_name" placeholder="required">
 
 					<label for="mail">Email Address</label>
-					<input type="email" id="mail" name="user_email">
+					<input type="email" id="mail" name="user_email" placeholder="required">
 
 					<label for="phone">Phone Number</label>
-					<input type="tel" id="phone" name="user_phone">
+					<input type="tel" id="phone" name="user_phone" placeholder="e.g. (999) 999-9999">
 
 					<label for="address">Street Address</label>
 					<input type="text" id="address" name="user_address">
@@ -124,19 +126,30 @@
 
 					<legend>Newsletter</legend>
 
-					<label class="spacing">Select the newsletters you would like to recieve</label>
+					<label class="more_room">Select the newsletters you would like to recieve</label>
 
-					<input type="checkbox" id="check_html" value="newsletter_html" name="html_news"><label for="check_html" class="inline">HTML News</label>
-					<input type="checkbox" id="check_css" value="newsletter_css" name="css_news"><label for="check_css" class="inline">CSS News</label>
-					<input type="checkbox" id="check_java" value="newsletter_java" name="java_news"><label for="check_java" class="inline">Javascript News</label>
+					<input type="checkbox" id="check_html" value="newsletter_html" name="html_news"><label for="check_html">HTML News</label>
+					<input type="checkbox" id="check_css" value="newsletter_css" name="css_news"><label for="check_css">CSS News</label>
+					<input type="checkbox" id="check_java" value="newsletter_java" name="java_news"><label for="check_java">Javascript News</label>
 
-					<label class="spacing">Newsletter format</label>
+					<label class="more_room">Newsletter format</label>
 
-					<input type="radio" id="radio_html" value="radio_html" name="format_type"><label for="radio_html" class="inline">HTML</label>
-					<input type="radio" id="radio_plain" value="radio_plain" name="format_type"><label for="radio_plain" class="inline">Plain text</label>
+					<input type="radio" id="radio_html" value="radio_html" name="format_type"><label for="radio_html">HTML</label>
+					<input type="radio" id="radio_plain" value="radio_plain" name="format_type"><label for="radio_plain">Plain text</label>
 
-					<label for="topics" class="spacing">Other topics you'd like to hear about</label>
+					<label for="topics" class="more_room">Other topics you'd like to hear about</label>
 					<textarea id="topics" name="user_topics"></textarea>
+					
+				</fieldset>
+
+				<hr>
+
+				<fieldset>
+
+					<label>May we sell your information to various marketing agencies?</label>
+
+					<input type="radio" id="radio_yes" value="radio_yes" name="privacy_agree"><label for="radio_yes">Yes<span class="small">...but no</span></label>
+					<input type="radio" id="radio_no" value="radio_plain" name="privacy_agree"><label for="radio_no">No<span class="small">...but yes</span></label>
 					
 				</fieldset>
 
