@@ -121,6 +121,10 @@ option {
   	color: #000;
 }
 
+option[value=""][disabled] {
+  	display: none;
+}
+
 button {
 	width: 100%;
 	text-align: center;
@@ -186,6 +190,10 @@ section:after {
 	border-right: 20px solid transparent;
 	border-top: 20px solid #259CA7;
 	left: 21px;
+}
+
+.dropdown-title {
+	color: gray;
 }
 
 .newsletter legend {
