@@ -70,8 +70,6 @@ select {
 	background-color: #eee;
 	color: #000;
 	text-align: left;
-
-	
 }
 
 input[type="text"]:focus,
@@ -108,7 +106,7 @@ input[type="number"] {
 }
 
 input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
+input[type=number]::-webkit-outer-spin-button { /* Remove Number Counter */
   -webkit-appearance: none; 
   margin: 0; 
 }
@@ -133,7 +131,6 @@ button {
 	padding: 25px;
 	background-color: #e05135;
 	border-radius: 5px;
-	font-weight: bold;
     font-size: 1.125em;
     letter-spacing: 0.03em;
 }
@@ -153,7 +150,7 @@ fieldset {
 	padding: 0;
 }
 
-form fieldset:last-of-type {
+form fieldset:last-of-type, legend {
 	margin-bottom: 1.5em;
 }
 
@@ -161,9 +158,8 @@ textarea {
 	height: 6.667em;
 }
 
-legend {
+legend, button {
 	font-weight: bold;
-	margin-bottom: 1.5em;
 }
 
 label {
@@ -190,10 +186,6 @@ section:after {
 	border-right: 20px solid transparent;
 	border-top: 20px solid #259CA7;
 	left: 21px;
-}
-
-.dropdown-title {
-	color: gray;
 }
 
 .newsletter legend {
@@ -248,7 +240,11 @@ input[type="radio"] + label:before {
 
 
 
-/*-----Media Classes---------*/
+/*-------------------------------------
+---------------------------------------
+			Media Classes
+----------------------------------------
+---------------------------------------*/
 
 
 @media screen and (min-width: 480px) {
@@ -290,7 +286,6 @@ input[type="radio"] + label:before {
 	input[type="tel"],
 	select {
 		width: 75%;
-		text-align: right;
 	}
 
 	input[type="number"] {
@@ -300,11 +295,6 @@ input[type="radio"] + label:before {
 	legend {
 		font-size: 1.1em;
 		margin-bottom: 2em;
-	}
-
-	.newsletter label,
-	.privacy label {
-		display: block;
 	}
 
 	textarea {
@@ -318,6 +308,12 @@ input[type="radio"] + label:before {
 
 	.arrow-down {
 		left: 40px;
+	}
+
+	.newsletter label,
+	.privacy label {
+		display: block;
+		margin-bottom: 1em;
 	}
 
 	.more_room, .more_room2 {
