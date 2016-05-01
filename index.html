@@ -43,9 +43,9 @@
 					<label for="city">City</label>
 					<input type="text" id="city" name="user_city">
 
-					<label>State</label>
+					<label for="state" >State</label>
 					<select id="state" name="user_state">
-						<option value="" disabled selected>Choose State</option>
+						<option type="hidden" value="" disabled selected>Choose State</option>
 						<optgroup label="A">
 							<option value="alabama">Alabama</option>
 							<option value="alaska">Alaska</option>
@@ -137,7 +137,7 @@
 					</select>
 
 					<label for="zip">Zip Code</label>
-					<input type="number" id="zip" name="user_zip" max="5">
+					<input type="text" id="zip" name="user_zip" maxlength="5">
 
 				</fieldset>
 				
@@ -166,6 +166,8 @@
 				<hr>
 
 				<fieldset class="privacy">
+
+					<legend>Privacy</legend>
 
 					<label class="more_room2">May we sell your information to various marketing agencies?</label>
 
